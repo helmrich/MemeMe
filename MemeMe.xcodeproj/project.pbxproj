@@ -12,6 +12,10 @@
 		D2DC03D41D5C87A10072C316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DC03D21D5C87A10072C316 /* Main.storyboard */; };
 		D2DC03D61D5C87A10072C316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2DC03D51D5C87A10072C316 /* Assets.xcassets */; };
 		D2DC03D91D5C87A10072C316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DC03D71D5C87A10072C316 /* LaunchScreen.storyboard */; };
+		D2DC03E11D5C9F620072C316 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC03E01D5C9F620072C316 /* TextFieldExtension.swift */; };
+		D2DC04011D5DEB9B0072C316 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC04001D5DEB9B0072C316 /* Meme.swift */; };
+		D2DC04041D5DF42B0072C316 /* TopMemeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC04031D5DF42B0072C316 /* TopMemeTextFieldDelegate.swift */; };
+		D2DC04061D5DF43C0072C316 /* BottomMemeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC04051D5DF43C0072C316 /* BottomMemeTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		D2DC03D51D5C87A10072C316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2DC03D81D5C87A10072C316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2DC03DA1D5C87A10072C316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2DC03E01D5C9F620072C316 /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		D2DC04001D5DEB9B0072C316 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		D2DC04031D5DF42B0072C316 /* TopMemeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMemeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		D2DC04051D5DF43C0072C316 /* BottomMemeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomMemeTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		D2DC03CD1D5C87A10072C316 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
+				D2DC04021D5DF3F90072C316 /* Text Field Delegates */,
 				D2DC03CE1D5C87A10072C316 /* AppDelegate.swift */,
 				D2DC03D01D5C87A10072C316 /* ViewController.swift */,
+				D2DC03E01D5C9F620072C316 /* TextFieldExtension.swift */,
+				D2DC04001D5DEB9B0072C316 /* Meme.swift */,
 				D2DC03D21D5C87A10072C316 /* Main.storyboard */,
 				D2DC03D51D5C87A10072C316 /* Assets.xcassets */,
 				D2DC03D71D5C87A10072C316 /* LaunchScreen.storyboard */,
 				D2DC03DA1D5C87A10072C316 /* Info.plist */,
 			);
 			path = MemeMe;
+			sourceTree = "<group>";
+		};
+		D2DC04021D5DF3F90072C316 /* Text Field Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D2DC04031D5DF42B0072C316 /* TopMemeTextFieldDelegate.swift */,
+				D2DC04051D5DF43C0072C316 /* BottomMemeTextFieldDelegate.swift */,
+			);
+			name = "Text Field Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2DC03E11D5C9F620072C316 /* TextFieldExtension.swift in Sources */,
+				D2DC04061D5DF43C0072C316 /* BottomMemeTextFieldDelegate.swift in Sources */,
+				D2DC04011D5DEB9B0072C316 /* Meme.swift in Sources */,
+				D2DC04041D5DF42B0072C316 /* TopMemeTextFieldDelegate.swift in Sources */,
 				D2DC03D11D5C87A10072C316 /* ViewController.swift in Sources */,
 				D2DC03CF1D5C87A10072C316 /* AppDelegate.swift in Sources */,
 			);

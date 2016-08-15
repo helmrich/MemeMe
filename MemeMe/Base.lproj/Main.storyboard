@@ -48,7 +48,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgQ-i6-hfi">
-                                <rect key="frame" x="25" y="50" width="52" height="36"/>
+                                <rect key="frame" x="20" y="45" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
@@ -64,9 +64,9 @@
                             <constraint firstItem="DtM-Je-pVG" firstAttribute="top" secondItem="2od-QM-VsU" secondAttribute="bottom" id="Lgc-CJ-nhr"/>
                             <constraint firstItem="2od-QM-VsU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O1A-rH-SgA"/>
                             <constraint firstItem="2od-QM-VsU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XgU-AV-hMO"/>
-                            <constraint firstItem="FgQ-i6-hfi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="cg0-o0-abC"/>
+                            <constraint firstItem="FgQ-i6-hfi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="cg0-o0-abC"/>
                             <constraint firstAttribute="trailing" secondItem="II2-Ew-Ve7" secondAttribute="trailing" constant="20" id="d4u-0O-KpL"/>
-                            <constraint firstItem="FgQ-i6-hfi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="flw-aK-KP0"/>
+                            <constraint firstItem="FgQ-i6-hfi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="flw-aK-KP0"/>
                             <constraint firstItem="DtM-Je-pVG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hDZ-MI-TmH"/>
                             <constraint firstAttribute="trailing" secondItem="2od-QM-VsU" secondAttribute="trailing" id="hc9-YJ-gCO"/>
                             <constraint firstItem="2od-QM-VsU" firstAttribute="top" secondItem="cH5-wQ-XTF" secondAttribute="bottom" constant="-98" id="lTq-1K-XQc"/>

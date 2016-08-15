@@ -66,7 +66,4 @@ fastlane/test_output
 
 # Screenshots
 
-mememe-finished-meme.png
-mememe-input-text.png
-mememe-share-meme.png
-mememe-start-screen.png
+*.png

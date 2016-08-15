@@ -11,11 +11,11 @@ import UIKit
 
 extension UITextField {
     // Sets up a text field to look like the "classical" meme font
-    func setMemeAttributes() {
+    func setMemeAttributes(withFont fontName: String) {
         let textFieldAttributes = [
             NSStrokeColorAttributeName: UIColor.blackColor(),
             NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSFontAttributeName: UIFont(name: fontName, size: 40)!,
             // The NSStrokeWidthAttributeName key's value has to be set to a negative value in order to show
             // both the stroke and the foreground color
             NSStrokeWidthAttributeName: -4.0

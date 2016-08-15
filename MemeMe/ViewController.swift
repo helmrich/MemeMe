@@ -15,14 +15,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var memeImageView: UIImageView!
     
-    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var toolBarTop: UIToolbar!
+    @IBOutlet weak var toolBarBottom: UIToolbar!
     @IBOutlet weak var albumBarButton: UIBarButtonItem!
     @IBOutlet weak var cameraBarButton: UIBarButtonItem!
     
     @IBOutlet weak var memeTopTextField: UITextField!
     @IBOutlet weak var memeBottomTextField: UITextField!
     
-    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     // MARK: - Instances of text field delegates
     
@@ -42,6 +43,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         memeBottomTextField.delegate = memeBottomTextFieldDelegate
         memeTopTextField.setMemeAttributes()
         memeBottomTextField.setMemeAttributes()
+        
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -84,7 +87,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
-    // MARK: - Buttons
     @IBAction func shareMeme() {
         // When the "Share" button is tapped:
         // - Generate a memed image
@@ -163,9 +165,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - Additional functions
     
     // Set the status bar's text color to white due to the dark background of this view controller
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
+//    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+//        return UIStatusBarStyle.LightContent
+//    }
     
     func saveMeme() {
         let memedImage = generateMemedImage()
@@ -184,8 +186,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func generateMemedImage() -> UIImage {
         // Hide elements that shouldn't appear on the memed image
         // (e.g. toolbar, buttons, etc.)
-        toolBar.hidden = true
-        shareButton.hidden = true
+        toolBarTop.hidden = true
+        toolBarBottom.hidden = true
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -194,8 +196,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
         
         // Show previously hidden elements again
-        toolBar.hidden = false
-        shareButton.hidden = false
+        toolBarTop.hidden = false
+        toolBarBottom.hidden = false
         
         return memedImage
     }

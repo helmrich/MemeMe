@@ -105,6 +105,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(activityViewController, animated: true, completion: nil)
     }
     
+    @IBAction func resetMeme() {
+        memeTopTextField.text = "TOP"
+        memeBottomTextField.text = "BOTTOM"
+        memeImageView.image = nil
+    }
+    
     // MARK: - UIImagePickerController delegate methods
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -164,11 +170,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - Additional functions
     
-    // Set the status bar's text color to white due to the dark background of this view controller
-//    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-//        return UIStatusBarStyle.LightContent
-//    }
-    
     func saveMeme() {
         let memedImage = generateMemedImage()
         
@@ -180,8 +181,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let meme = Meme(topText: topText, bottomText: bottomText, image: image, memedImage: memedImage)
         }
     }
-    
-    //topText: String, bottomText: String, image: UIImage, memedImage: UIImage
     
     func generateMemedImage() -> UIImage {
         // Hide elements that shouldn't appear on the memed image
@@ -201,8 +200,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         return memedImage
     }
-    
-    
 
 }
 

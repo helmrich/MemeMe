@@ -105,9 +105,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func resetMeme() {
+        // Set the text fields' values to the default values and the image to nil
         memeTopTextField.text = "TOP"
         memeBottomTextField.text = "BOTTOM"
         memeImageView.image = nil
+        
+        // Reset the share button so it's disabled again
+        shareButton.enabled = false
     }
     
     // MARK: - UIImagePickerController delegate methods

@@ -41,9 +41,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Set the text field's delegate and change its appearance
         memeTopTextField.delegate = memeTopTextFieldDelegate
         memeBottomTextField.delegate = memeBottomTextFieldDelegate
-        memeTopTextField.setMemeAttributes()
-        memeBottomTextField.setMemeAttributes()
-        
+        memeTopTextField.setMemeAttributes(withFont: "HelveticaNeue-CondensedBlack", size: 40, alignment: .Center)
+        memeBottomTextField.setMemeAttributes(withFont: "HelveticaNeue-CondensedBlack", size: 40, alignment: .Center)
         
     }
     

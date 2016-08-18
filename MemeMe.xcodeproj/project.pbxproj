@@ -13,11 +13,14 @@
 		D2847C8E1D631BA400F08DD5 /* ArchitectsDaughter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C7B1D626FD500F08DD5 /* ArchitectsDaughter.ttf */; };
 		D2847C8F1D631BA400F08DD5 /* Assistant-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C7C1D62700000F08DD5 /* Assistant-ExtraBold.ttf */; };
 		D2847C901D631BA400F08DD5 /* Biryani-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C7D1D62700000F08DD5 /* Biryani-Heavy.ttf */; };
-		D2847C911D631BA400F08DD5 /* CutiveMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C7E1D62700000F08DD5 /* CutiveMono-Regular.ttf */; };
 		D2847C921D631BA400F08DD5 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C7F1D62700000F08DD5 /* FugazOne-Regular.ttf */; };
-		D2847C931D631BA400F08DD5 /* MontserratSubrayada-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C801D62700000F08DD5 /* MontserratSubrayada-Bold.ttf */; };
 		D2847C941D631BA400F08DD5 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C811D62700000F08DD5 /* Oswald-Bold.ttf */; };
-		D2847C951D631BA400F08DD5 /* PoiretOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C821D62700000F08DD5 /* PoiretOne-Regular.ttf */; };
+		D2847C9E1D664DE700F08DD5 /* DenkOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C981D664DE700F08DD5 /* DenkOne-Regular.ttf */; };
+		D2847C9F1D664DE700F08DD5 /* FjallaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C991D664DE700F08DD5 /* FjallaOne-Regular.ttf */; };
+		D2847CA01D664DE700F08DD5 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C9A1D664DE700F08DD5 /* Lobster-Regular.ttf */; };
+		D2847CA11D664DE700F08DD5 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C9B1D664DE700F08DD5 /* OpenSans-ExtraBold.ttf */; };
+		D2847CA21D664DE700F08DD5 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C9C1D664DE700F08DD5 /* Pacifico.ttf */; };
+		D2847CA31D664DE700F08DD5 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2847C9D1D664DE700F08DD5 /* Roboto-Black.ttf */; };
 		D2DC03CF1D5C87A10072C316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC03CE1D5C87A10072C316 /* AppDelegate.swift */; };
 		D2DC03D11D5C87A10072C316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC03D01D5C87A10072C316 /* ViewController.swift */; };
 		D2DC03D41D5C87A10072C316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2DC03D21D5C87A10072C316 /* Main.storyboard */; };
@@ -34,13 +37,16 @@
 		D2847C7B1D626FD500F08DD5 /* ArchitectsDaughter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArchitectsDaughter.ttf; sourceTree = "<group>"; };
 		D2847C7C1D62700000F08DD5 /* Assistant-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Assistant-ExtraBold.ttf"; sourceTree = "<group>"; };
 		D2847C7D1D62700000F08DD5 /* Biryani-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Biryani-Heavy.ttf"; sourceTree = "<group>"; };
-		D2847C7E1D62700000F08DD5 /* CutiveMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CutiveMono-Regular.ttf"; sourceTree = "<group>"; };
 		D2847C7F1D62700000F08DD5 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
-		D2847C801D62700000F08DD5 /* MontserratSubrayada-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratSubrayada-Bold.ttf"; sourceTree = "<group>"; };
 		D2847C811D62700000F08DD5 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
-		D2847C821D62700000F08DD5 /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
 		D2847C871D62817300F08DD5 /* FontSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSelectionViewController.swift; sourceTree = "<group>"; };
 		D2847C8B1D63170600F08DD5 /* FontTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontTableViewCell.swift; sourceTree = "<group>"; };
+		D2847C981D664DE700F08DD5 /* DenkOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DenkOne-Regular.ttf"; sourceTree = "<group>"; };
+		D2847C991D664DE700F08DD5 /* FjallaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FjallaOne-Regular.ttf"; sourceTree = "<group>"; };
+		D2847C9A1D664DE700F08DD5 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		D2847C9B1D664DE700F08DD5 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D2847C9C1D664DE700F08DD5 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		D2847C9D1D664DE700F08DD5 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		D2DC03CB1D5C87A10072C316 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DC03CE1D5C87A10072C316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2DC03D01D5C87A10072C316 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,11 +78,14 @@
 				D2847C7B1D626FD500F08DD5 /* ArchitectsDaughter.ttf */,
 				D2847C7C1D62700000F08DD5 /* Assistant-ExtraBold.ttf */,
 				D2847C7D1D62700000F08DD5 /* Biryani-Heavy.ttf */,
-				D2847C7E1D62700000F08DD5 /* CutiveMono-Regular.ttf */,
 				D2847C7F1D62700000F08DD5 /* FugazOne-Regular.ttf */,
-				D2847C801D62700000F08DD5 /* MontserratSubrayada-Bold.ttf */,
 				D2847C811D62700000F08DD5 /* Oswald-Bold.ttf */,
-				D2847C821D62700000F08DD5 /* PoiretOne-Regular.ttf */,
+				D2847C981D664DE700F08DD5 /* DenkOne-Regular.ttf */,
+				D2847C991D664DE700F08DD5 /* FjallaOne-Regular.ttf */,
+				D2847C9A1D664DE700F08DD5 /* Lobster-Regular.ttf */,
+				D2847C9B1D664DE700F08DD5 /* OpenSans-ExtraBold.ttf */,
+				D2847C9C1D664DE700F08DD5 /* Pacifico.ttf */,
+				D2847C9D1D664DE700F08DD5 /* Roboto-Black.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -188,12 +197,15 @@
 				D2847C8E1D631BA400F08DD5 /* ArchitectsDaughter.ttf in Resources */,
 				D2847C8F1D631BA400F08DD5 /* Assistant-ExtraBold.ttf in Resources */,
 				D2847C901D631BA400F08DD5 /* Biryani-Heavy.ttf in Resources */,
-				D2847C911D631BA400F08DD5 /* CutiveMono-Regular.ttf in Resources */,
 				D2847C921D631BA400F08DD5 /* FugazOne-Regular.ttf in Resources */,
-				D2847C931D631BA400F08DD5 /* MontserratSubrayada-Bold.ttf in Resources */,
 				D2847C941D631BA400F08DD5 /* Oswald-Bold.ttf in Resources */,
-				D2847C951D631BA400F08DD5 /* PoiretOne-Regular.ttf in Resources */,
+				D2847C9E1D664DE700F08DD5 /* DenkOne-Regular.ttf in Resources */,
+				D2847C9F1D664DE700F08DD5 /* FjallaOne-Regular.ttf in Resources */,
+				D2847CA11D664DE700F08DD5 /* OpenSans-ExtraBold.ttf in Resources */,
 				D2DC03D91D5C87A10072C316 /* LaunchScreen.storyboard in Resources */,
+				D2847CA31D664DE700F08DD5 /* Roboto-Black.ttf in Resources */,
+				D2847CA21D664DE700F08DD5 /* Pacifico.ttf in Resources */,
+				D2847CA01D664DE700F08DD5 /* Lobster-Regular.ttf in Resources */,
 				D2DC03D61D5C87A10072C316 /* Assets.xcassets in Resources */,
 				D2DC03D41D5C87A10072C316 /* Main.storyboard in Resources */,
 			);

@@ -55,11 +55,14 @@
 		<string>ArchitectsDaughter.ttf</string>
 		<string>Assistant-ExtraBold.ttf</string>
 		<string>Biryani-Heavy.ttf</string>
-		<string>CutiveMono-Regular.ttf</string>
 		<string>FugazOne-Regular.ttf</string>
-		<string>MontserratSubrayada-Bold.ttf</string>
 		<string>Oswald-Bold.ttf</string>
-		<string>PoiretOne-Regular.ttf</string>
+		<string>DenkOne-Regular.ttf</string>
+		<string>FjallaOne-Regular.ttf</string>
+		<string>Lobster-Regular.ttf</string>
+		<string>OpenSans-ExtraBold.ttf</string>
+		<string>Pacifico.ttf</string>
+		<string>Roboto-Black.ttf</string>
 	</array>
 </dict>
 </plist>

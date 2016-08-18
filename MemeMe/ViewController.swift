@@ -100,6 +100,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.saveMeme()
         }
         
+        // The sourceView property for the activityViewController's popoverPresentationController has to be set
+        // to the view controller for iPads
+        activityViewController.popoverPresentationController?.sourceView = self.view
         // - Present the activity view controller
         presentViewController(activityViewController, animated: true, completion: nil)
     }

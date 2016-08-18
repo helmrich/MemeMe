@@ -112,6 +112,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Reset the share button so it's disabled again
         shareButton.enabled = false
+        
+        // When the meme is reset no text field should be selected, so this checks which text field is currently selected
+        // and if a text field is selected the first responders is resigned
+        if memeTopTextField.isFirstResponder() {
+            memeTopTextField.resignFirstResponder()
+        } else if memeBottomTextField.isFirstResponder() {
+            memeBottomTextField.resignFirstResponder()
+        }
     }
     
     // MARK: - UIImagePickerController delegate methods
@@ -149,15 +157,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func keyboardStatusChanged(notification: NSNotification) {
         let keyboardHeight = getKeyboardHeight(notification)
-        // The following if-statement checks which notification was sent and whether the keyboard is currently active or not
+        // The following if-statement checks which notification was sent and whether the keyboard is currently active or not.
+        // It also checks if the memeBottomTextField is the first responders which means that it's selected. This is checked because
+        // otherwise the topTextField would disappear even though it is the selected text field.
         // After changing the view's frame's y-position it resets the keyboardActive variable to keep track of the current state of
         // the keyboard. This is neccessary because otherwise the view would always be moved up when the user directly goes from
         // one text field to the other without dismissing the keyboard.
-        if notification.name == UIKeyboardWillShowNotification && keyboardActive == false {
+        if notification.name == UIKeyboardWillShowNotification && keyboardActive == false && memeBottomTextField.isFirstResponder() {
             // Move the view up by the keyboard's height
             self.view.frame.origin.y -= keyboardHeight
             keyboardActive = true
-        } else if notification.name == UIKeyboardWillHideNotification && keyboardActive == true {
+        } else if notification.name == UIKeyboardWillHideNotification && keyboardActive == true && memeBottomTextField.isFirstResponder() {
             // Move the view down again
             self.view.frame.origin.y += keyboardHeight
             keyboardActive = false

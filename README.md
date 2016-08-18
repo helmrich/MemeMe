@@ -7,13 +7,16 @@ camera and adding a text at the top and bottom of the image. Afterwards the user
 
 ## Screenshots
 ### Start screen
-![MemeMe start screen](https://github.com/helmrich/MemeMe/blob/master/mememe-start-screen.png "MemeMe start screen")
+![MemeMe start screen](https://github.com/helmrich/MemeMe/blob/master/MemeMe-start.png "MemeMe start screen")
 
 ### When adding text
-![MemeMe adding text](https://github.com/helmrich/MemeMe/blob/master/mememe-input-text.png "MemeMe adding text")
+![MemeMe adding text](https://github.com/helmrich/MemeMe/blob/master/MemeMe-text.png "MemeMe adding text")
+
+### Choosing a font
+![MemeMe choosing a font](https://github.com/helmrich/MemeMe/blob/master/MemeMe-choosing-a-font.png "MemeMe choosing a font")
 
 ### After creating a meme
-![MemeMe finished meme](https://github.com/helmrich/MemeMe/blob/master/mememe-finished-meme.png "MemeMe finished meme")
+![MemeMe finished meme](https://github.com/helmrich/MemeMe/blob/master/MemeMe-finished.png "MemeMe finished meme")
 
 ### Sharing/Saving a meme
-![MemeMe sharing or saving a meme](https://github.com/helmrich/MemeMe/blob/master/mememe-share-meme.png "MemeMe sharing or saving a meme")
+![MemeMe sharing or saving a meme](https://github.com/helmrich/MemeMe/blob/master/MemeMe-sharing.png "MemeMe sharing or saving a meme")

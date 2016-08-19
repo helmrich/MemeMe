@@ -34,10 +34,6 @@ class FontSelectionViewController: UIViewController, UITableViewDelegate, UITabl
             index += 1
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     @IBAction func dismissFontSelection() {
         dismissViewControllerAnimated(true, completion: nil)

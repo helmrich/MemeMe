@@ -27,8 +27,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - Instances of text field delegates
     
-    let memeTopTextFieldDelegate = TopMemeTextFieldDelegate()
-    let memeBottomTextFieldDelegate = BottomMemeTextFieldDelegate()
+    let memeTopTextFieldDelegate = MemeTextFieldDelegate()
+    let memeBottomTextFieldDelegate = MemeTextFieldDelegate()
     
     // This variable holds the information if the keyboard is currenty displayed or not
     var keyboardActive = false
@@ -65,25 +65,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         unsubscribeFromKeyboardNotifications()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-
     // MARK: - Actions
     // MARK: - Toolbar Buttons
     @IBAction func selectImageFromAlbum() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .PhotoLibrary
-        presentViewController(imagePickerController, animated: true, completion: nil)
+        presentImagePicker(withSourceType: .PhotoLibrary)
     }
     
     @IBAction func selectImageFromCamera() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .Camera
-        presentViewController(imagePickerController, animated: true, completion: nil)
+        presentImagePicker(withSourceType: .Camera)
     }
     
     @IBAction func shareMeme() {
@@ -215,6 +204,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         toolBarBottom.hidden = false
         
         return memedImage
+    }
+    
+    // This function takes a source type as a parameter and will then present a UIImagePickerController with the appropriate source type
+    func presentImagePicker(withSourceType sourceType: UIImagePickerControllerSourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = sourceType
+        presentViewController(imagePickerController, animated: true, completion: nil)
     }
 
 }

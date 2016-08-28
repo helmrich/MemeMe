@@ -1,0 +1,44 @@
+//
+//  SharedMemesCollectionViewController.swift
+//  MemeMe
+//
+//  Created by Tobias Helmrich on 22.08.16.
+//  Copyright © 2016 Tobias Helmrich. All rights reserved.
+//
+
+import UIKit
+
+class SharedMemesCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        flowLayout.minimumLineSpacing = 5
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (UIApplication.sharedApplication().delegate as! AppDelegate).memes.count
+    }
+
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCell", forIndexPath: indexPath)
+        let imageView = UIImageView(image:  (UIApplication.sharedApplication().delegate as! AppDelegate).memes[indexPath.row].image)
+        cell.backgroundView = imageView
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // Push the MemeDetailViewController onto the navigation controller's stack
+        // after passing it the selected meme
+        let currentMeme = (UIApplication.sharedApplication().delegate as! AppDelegate).memes[indexPath.row]
+        let detailViewController = storyboard?.instantiateViewControllerWithIdentifier("memeDetailVC") as! MemeDetailViewController
+        detailViewController.meme = currentMeme
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    
+    
+}

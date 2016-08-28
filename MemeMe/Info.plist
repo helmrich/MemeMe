@@ -46,9 +46,9 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIStatusBarHidden</key>
+	<false/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Anton.ttf</string>

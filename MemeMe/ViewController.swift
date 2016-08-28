@@ -104,13 +104,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // the text fields' and imageView's values
         activityViewController.completionWithItemsHandler = {
             (activity, success, items, error) in
-            if let topText = self.memeTopTextField.text,
-                bottomText = self.memeBottomTextField.text,
-                image = self.memeImageView.image {
-                Meme.saveMeme(topText, bottomText: bottomText, image: image, memedImage: memedImage)
-            }
             // If it was a success - which means that the action could be performed the whole editing view controller should be dismissed
             if success {
+                if let topText = self.memeTopTextField.text,
+                    bottomText = self.memeBottomTextField.text,
+                    image = self.memeImageView.image {
+                    Meme.saveMeme(topText, bottomText: bottomText, image: image, memedImage: memedImage)
+                }
                 self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 // If it didn't succeed - which is also the case if the cancel button is pressed in the activity view controller - 
@@ -118,10 +118,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 activityViewController.dismissViewControllerAnimated(true, completion: nil)
             }
         }
-        
-        // The sourceView property for the activityViewController's popoverPresentationController has to be set
-        // to the view controller in order to work for iPads
-        activityViewController.popoverPresentationController?.sourceView = self.view
+        // The activityViewController's popoverPresentationController has to be set in order to work for iPads
+        activityViewController.popoverPresentationController?.barButtonItem = shareButton
         // - Present the activity view controller
         presentViewController(activityViewController, animated: true, completion: nil)
     }

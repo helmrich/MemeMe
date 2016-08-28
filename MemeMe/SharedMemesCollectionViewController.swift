@@ -11,12 +11,20 @@ import UIKit
 class SharedMemesCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var sharedMemesCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        flowLayout.minimumLineSpacing = 5
+        let availableSpace = self.view.frame.height + self.view.frame.width
         
+        flowLayout.minimumInteritemSpacing = availableSpace / 200
+        flowLayout.minimumLineSpacing = availableSpace / 200
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        sharedMemesCollectionView.reloadData()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -25,8 +33,9 @@ class SharedMemesCollectionViewController: UIViewController, UICollectionViewDat
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCell", forIndexPath: indexPath)
-        let imageView = UIImageView(image:  (UIApplication.sharedApplication().delegate as! AppDelegate).memes[indexPath.row].image)
+        let imageView = UIImageView(image:  (UIApplication.sharedApplication().delegate as! AppDelegate).memes[indexPath.row].memedImage)
         cell.backgroundView = imageView
+        cell.backgroundView?.contentMode = .ScaleAspectFit
         return cell
     }
     

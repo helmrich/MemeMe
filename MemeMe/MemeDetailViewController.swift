@@ -14,6 +14,7 @@ class MemeDetailViewController: UIViewController {
     
     // MARK: - Outlets and Actions
     @IBOutlet weak var memedImageView: UIImageView!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBAction func presentMemeEditor() {
         let viewController = storyboard?.instantiateViewControllerWithIdentifier("memeEditor") as! ViewController
@@ -41,6 +42,8 @@ class MemeDetailViewController: UIViewController {
                     activityViewController.dismissViewControllerAnimated(true, completion: nil)
                 }
             }
+            // The activityViewController's popoverPresentationController has to be set in order to work for iPads
+            activityViewController.popoverPresentationController?.barButtonItem = shareButton
             presentViewController(activityViewController, animated: true, completion: nil)
         }
     }

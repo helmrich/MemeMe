@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
-
+    
+    // MARK: - Properties
+    
+    var meme: Meme?
     
     // MARK: - Outlets
     
@@ -37,7 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set the text field's delegate and change its appearance
         memeTopTextField.delegate = memeTopTextFieldDelegate
         memeBottomTextField.delegate = memeBottomTextFieldDelegate
@@ -49,10 +52,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        // This unwraps the optional meme property and if it can be unwrapped it means that this view controller
+        // is presented by the MemeDetailViewController which means that an existing meme should be edited so the
+        // outlets' values are set to the existing meme's values
+        // If it can't be unwrapped it means that no meme was passed so nothing should happen
+        if let meme = meme {
+            memeTopTextField.text = meme.topText
+            memeBottomTextField.text = meme.bottomText
+            memeImageView.image = meme.image
+        }
+        
         // Check if the used source types are available and
         // set its related bar button depending on this
         albumBarButton.enabled = UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary)
         cameraBarButton.enabled = UIImagePickerController.isSourceTypeAvailable(.Camera)
+        
+        // Check if the image is set which indicates that it's an existing meme and enable the share button if that's the case
+        // Otherwise it should be disabled as it's not a meme if there is no image
+        shareButton.enabled = memeImageView.image != nil
         
         // Subscribe to receive keyboard notifications
         subscribeToKeyboardNotifications()
@@ -83,35 +100,43 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // - Create an instance of a UIActivityViewController
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         
-        // - Call the saveMeme() function in the activity view controller's completion handler
+        // - Call the saveMeme() function in the activity view controller's completion handler after optionally unwrapping
+        // the text fields' and imageView's values
         activityViewController.completionWithItemsHandler = {
             (activity, success, items, error) in
-            self.saveMeme()
+            if let topText = self.memeTopTextField.text,
+                bottomText = self.memeBottomTextField.text,
+                image = self.memeImageView.image {
+                Meme.saveMeme(topText, bottomText: bottomText, image: image, memedImage: memedImage)
+            }
+            // If it was a success - which means that the action could be performed the whole editing view controller should be dismissed
+            if success {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            } else {
+                // If it didn't succeed - which is also the case if the cancel button is pressed in the activity view controller - 
+                // only the activity view controller should be dismissed, the editing view controller however should still be displayed
+                activityViewController.dismissViewControllerAnimated(true, completion: nil)
+            }
         }
         
         // The sourceView property for the activityViewController's popoverPresentationController has to be set
-        // to the view controller for iPads
+        // to the view controller in order to work for iPads
         activityViewController.popoverPresentationController?.sourceView = self.view
         // - Present the activity view controller
         presentViewController(activityViewController, animated: true, completion: nil)
     }
     
+    // This action will be triggered when the cancel button is pressed
     @IBAction func resetMeme() {
         // Set the text fields' values to the default values and the image to nil
         memeTopTextField.text = "TOP"
         memeBottomTextField.text = "BOTTOM"
         memeImageView.image = nil
         
-        // Reset the share button so it's disabled again
-        shareButton.enabled = false
+        resignFirstResponderOfMemeTextFields()
         
-        // When the meme is reset no text field should be selected, so this checks which text field is currently selected
-        // and if a text field is selected the first responders is resigned
-        if memeTopTextField.isFirstResponder() {
-            memeTopTextField.resignFirstResponder()
-        } else if memeBottomTextField.isFirstResponder() {
-            memeBottomTextField.resignFirstResponder()
-        }
+        // When the cancel button is pressed, this view controller should be dismissed after all the values are reset
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - UIImagePickerController delegate methods
@@ -175,16 +200,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - Additional functions
     
-    func saveMeme() {
-        let memedImage = generateMemedImage()
-        
-        // Unwrap the text field's optional text property and the image view's optional image property
-        // and create a Meme object with those values as parameters
-        if let topText = memeTopTextField.text,
-        bottomText = memeBottomTextField.text,
-            image = memeImageView.image {
-            let meme = Meme(topText: topText, bottomText: bottomText, image: image, memedImage: memedImage)
-        }
+    // This function hides the status bar in this view controller
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     func generateMemedImage() -> UIImage {
@@ -192,6 +210,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // (e.g. toolbar, buttons, etc.)
         toolBarTop.hidden = true
         toolBarBottom.hidden = true
+        
+        // Also resign the first responder so the cursor won't appear on the memed image
+        resignFirstResponderOfMemeTextFields()
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -212,6 +233,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePickerController.delegate = self
         imagePickerController.sourceType = sourceType
         presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    // This checks which text field is currently selected and if a text field is selected the first responders is resigned
+    func resignFirstResponderOfMemeTextFields() {
+        if memeTopTextField.isFirstResponder() {
+            memeTopTextField.resignFirstResponder()
+        } else if memeBottomTextField.isFirstResponder() {
+            memeBottomTextField.resignFirstResponder()
+        }
     }
 
 }

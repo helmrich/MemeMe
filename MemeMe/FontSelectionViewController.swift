@@ -71,6 +71,13 @@ class FontSelectionViewController: UIViewController, UITableViewDelegate, UITabl
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // MARK: - Additional functions
+    
+    // This function hides the status bar in this view controller
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     
     
 }

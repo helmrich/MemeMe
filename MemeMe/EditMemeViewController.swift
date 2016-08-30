@@ -163,11 +163,11 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         // one text field to the other without dismissing the keyboard.
         if notification.name == UIKeyboardWillShowNotification && keyboardActive == false && memeBottomTextField.isFirstResponder() {
             // Move the view up by the keyboard's height
-            self.view.frame.origin.y -= keyboardHeight
+            self.view.frame.origin.y = keyboardHeight * -1
             keyboardActive = true
         } else if notification.name == UIKeyboardWillHideNotification && keyboardActive == true && memeBottomTextField.isFirstResponder() {
             // Move the view down again
-            self.view.frame.origin.y += keyboardHeight
+            self.view.frame.origin.y = 0
             keyboardActive = false
         }
     }

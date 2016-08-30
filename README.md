@@ -6,17 +6,23 @@ MemeMe lets the user create own memes by either choosing an image from an existi
 camera and adding a text at the top and bottom of the image. Afterwards the user can save or/and share the meme.
 
 ## Screenshots
-### Start screen
-![MemeMe start screen](https://github.com/helmrich/MemeMe/blob/master/MemeMe-start.png "MemeMe start screen")
+### Overview of shared memes in a table view
+![MemeMe Overview of shared memes in table view](https://github.com/helmrich/MemeMe/blob/master/mememe-shared-meme-table.jpg)
 
-### When adding text
-![MemeMe adding text](https://github.com/helmrich/MemeMe/blob/master/MemeMe-text.png "MemeMe adding text")
+### Overview of shared memes in a collection view
+![MemeMe Overview of shared memes in collection view](https://github.com/helmrich/MemeMe/blob/master/mememe-shared-meme-collection.jpg)
 
-### Choosing a font
-![MemeMe choosing a font](https://github.com/helmrich/MemeMe/blob/master/MemeMe-choosing-a-font.png "MemeMe choosing a font")
+### At the beginning of creating a meme
+![MemeMe Screen at the beginning of creating a meme](https://github.com/helmrich/MemeMe/blob/master/mememe-editing-start.jpg)
 
-### After creating a meme
-![MemeMe finished meme](https://github.com/helmrich/MemeMe/blob/master/MemeMe-finished.png "MemeMe finished meme")
+### Inputting text
+![MemeMe When inputting text](https://github.com/helmrich/MemeMe/blob/master/mememe-text-input.jpg)
+
+### Selecting a font
+![MemeMe Font selection](https://github.com/helmrich/MemeMe/blob/master/mememe-font-selection.jpg)
 
 ### Sharing/Saving a meme
-![MemeMe sharing or saving a meme](https://github.com/helmrich/MemeMe/blob/master/MemeMe-sharing.png "MemeMe sharing or saving a meme")
+![MemeMe Sharing or saving a meme](https://github.com/helmrich/MemeMe/blob/master/mememe-share-meme.jpg)
+
+### Watching an already shared/saved meme
+![MemeMe Watching a shared/saved meme](https://github.com/helmrich/MemeMe/blob/master/mememe-created-meme-view.jpg)

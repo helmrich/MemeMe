@@ -16,10 +16,12 @@ class SharedMemesCollectionViewController: UIViewController, UICollectionViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let availableSpace = self.view.frame.height + self.view.frame.width
+        let availableSpace = self.view.frame.width
+        let sizeOfItem = CGSize(width: availableSpace / 4.1, height: availableSpace / 4.1)
         
-        flowLayout.minimumInteritemSpacing = availableSpace / 200
-        flowLayout.minimumLineSpacing = availableSpace / 200
+        flowLayout.itemSize = sizeOfItem
+        flowLayout.minimumInteritemSpacing = 1
+        flowLayout.minimumLineSpacing = 2
     }
     
     override func viewWillAppear(animated: Bool) {

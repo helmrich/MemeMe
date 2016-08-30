@@ -59,7 +59,7 @@ class FontSelectionViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: - Delegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Get the presenting view controller
-        let presentingVC = self.presentingViewController as! ViewController
+        let presentingVC = presentingViewController as! EditMemeViewController
         // Get the font of the row that was selected
         let currentFont = fonts[indexPath.row]
         for (fontName, _) in currentFont {

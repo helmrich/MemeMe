@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="1227" y="749"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Meme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="memeEditor" id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="memeEditor" id="BYZ-38-t0r" customClass="EditMemeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -226,13 +226,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="II2-Ew-Ve7">
-                                <rect key="frame" x="20" y="458" width="560" height="48"/>
+                                <rect key="frame" x="20" y="478" width="560" height="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-wQ-XTF">
-                                <rect key="frame" x="20" y="95" width="560" height="48"/>
+                                <rect key="frame" x="20" y="75" width="560" height="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -281,7 +281,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="II2-Ew-Ve7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7QB-aB-FMc"/>
-                            <constraint firstItem="cH5-wQ-XTF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="95" id="Bzi-ku-UwE"/>
+                            <constraint firstItem="cH5-wQ-XTF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="Bzi-ku-UwE"/>
                             <constraint firstItem="2od-QM-VsU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O1A-rH-SgA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2od-QM-VsU" secondAttribute="bottom" id="ShF-Ui-alP"/>
                             <constraint firstItem="2od-QM-VsU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wbe-V6-tC5"/>
@@ -293,7 +293,7 @@
                             <constraint firstAttribute="trailing" secondItem="DtM-Je-pVG" secondAttribute="trailing" id="nXP-iJ-APB"/>
                             <constraint firstAttribute="trailing" secondItem="urH-T0-vJI" secondAttribute="trailing" id="oep-x3-xAx"/>
                             <constraint firstItem="cH5-wQ-XTF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="peb-Md-FQe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="II2-Ew-Ve7" secondAttribute="bottom" constant="94" id="sxq-qd-prP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="II2-Ew-Ve7" secondAttribute="bottom" constant="74" id="sxq-qd-prP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DtM-Je-pVG" secondAttribute="bottom" id="vKw-Wg-r03"/>
                             <constraint firstAttribute="trailing" secondItem="cH5-wQ-XTF" secondAttribute="trailing" constant="20" id="yL7-jF-HUF"/>
                         </constraints>

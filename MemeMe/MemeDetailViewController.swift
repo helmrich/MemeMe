@@ -17,7 +17,7 @@ class MemeDetailViewController: UIViewController {
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBAction func presentMemeEditor() {
-        let viewController = storyboard?.instantiateViewControllerWithIdentifier("memeEditor") as! ViewController
+        let viewController = storyboard?.instantiateViewControllerWithIdentifier("memeEditor") as! EditMemeViewController
         if let meme = meme {
             viewController.meme = Meme(topText: meme.topText, bottomText: meme.bottomText, image: meme.image, memedImage: meme.memedImage)
         }

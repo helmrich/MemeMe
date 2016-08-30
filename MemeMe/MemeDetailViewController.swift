@@ -25,26 +25,8 @@ class MemeDetailViewController: UIViewController {
     }
     
     @IBAction func shareExistingMeme() {
-        // When the "Share" button is tapped:
-        // - Create an instance of a UIActivityViewController
         if let meme = meme {
-            let activityViewController = UIActivityViewController(activityItems: [meme.memedImage], applicationActivities: nil)
-        
-            activityViewController.completionWithItemsHandler = {
-                (activity, success, items, error) in
-                // If it was a success - which means that the action could be performed the current view controller should be popped off the 
-                // navigation controller
-                if success {
-                    self.navigationController?.popViewControllerAnimated(true)
-                } else {
-                    // If it didn't succeed - which is also the case if the cancel button is pressed in the activity view controller -
-                    // only the activity view controller should be dismissed, the detail view controller however should still be displayed
-                    activityViewController.dismissViewControllerAnimated(true, completion: nil)
-                }
-            }
-            // The activityViewController's popoverPresentationController has to be set in order to work for iPads
-            activityViewController.popoverPresentationController?.barButtonItem = shareButton
-            presentViewController(activityViewController, animated: true, completion: nil)
+            meme.share(withShareButton: shareButton, onViewController: self)
         }
     }
     
